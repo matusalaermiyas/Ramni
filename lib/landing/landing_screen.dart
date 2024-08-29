@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:ramniui/login/login_screen.dart';
 import 'package:ramniui/style/colors.dart';
 
 class LandingScreen extends StatelessWidget {
@@ -14,18 +16,19 @@ class LandingScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               height: 201,
               child: Column(
                 children: [
-                  Container(
+                  SizedBox(
                       width: 134,
                       height: 134,
                       child: Image.asset("assets/images/logo.png")),
                   Container(
                     width: 130,
                     height: 46,
-                    child: Text(
+                    margin: const EdgeInsets.only(top: 21),
+                    child: const Text(
                       "RAMNI",
                       textAlign: TextAlign.center,
                       style: TextStyle(
@@ -40,14 +43,16 @@ class LandingScreen extends StatelessWidget {
               ),
             ),
             Container(
+              margin: const EdgeInsets.only(top: 131),
               width: 249,
               height: 98,
               child: Column(
                 children: [
                   SizedBox(
                       width: 249,
+                      height: 58,
                       child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () => Get.to(LoginScreen()),
                           child: Text(
                             "GET STARTED",
                             style: TextStyle(
@@ -55,12 +60,15 @@ class LandingScreen extends StatelessWidget {
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold),
                           ))),
-                  Text(
-                    "SIGN IN",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold),
+                  Container(
+                    margin: const EdgeInsets.only(top: 18),
+                    child: Text(
+                      "SIGN IN",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold),
+                    ),
                   )
                 ],
               ),
