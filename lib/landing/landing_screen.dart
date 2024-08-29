@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ramniui/login/login_screen.dart';
+import 'package:ramniui/register/register_screen.dart';
 import 'package:ramniui/style/colors.dart';
 
 class LandingScreen extends StatelessWidget {
@@ -52,8 +53,8 @@ class LandingScreen extends StatelessWidget {
                       width: 249,
                       height: 58,
                       child: ElevatedButton(
-                          onPressed: () => Get.to(LoginScreen()),
-                          child: Text(
+                          onPressed: () => Get.to(const RegisterScreen()),
+                          child: const Text(
                             "GET STARTED",
                             style: TextStyle(
                                 color: textColor,
@@ -62,12 +63,15 @@ class LandingScreen extends StatelessWidget {
                           ))),
                   Container(
                     margin: const EdgeInsets.only(top: 18),
-                    child: Text(
-                      "SIGN IN",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold),
+                    child: GestureDetector(
+                      onTap: () => Get.to(const LoginScreen()),
+                      child: const Text(
+                        "SIGN IN",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                   )
                 ],
