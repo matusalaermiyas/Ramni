@@ -53,7 +53,9 @@ class RegisterScreen extends StatelessWidget {
                     ),
                     Container(
                       width: 343,
-                      color: Colors.grey[200],
+                      decoration: BoxDecoration(
+                          color: Colors.grey[200],
+                          borderRadius: BorderRadius.circular(4)),
                       margin:
                           const EdgeInsets.only(top: 16, left: 25, right: 25),
                       padding: const EdgeInsets.only(top: 26, left: 21),
@@ -79,7 +81,9 @@ class RegisterScreen extends StatelessWidget {
                       width: 343,
                       margin:
                           const EdgeInsets.only(top: 31, left: 25, right: 25),
-                      color: Colors.grey[200],
+                      decoration: BoxDecoration(
+                          color: Colors.grey[200],
+                          borderRadius: BorderRadius.circular(4)),
                       padding: const EdgeInsets.only(top: 26, left: 21),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -103,7 +107,9 @@ class RegisterScreen extends StatelessWidget {
                       width: 343,
                       margin:
                           const EdgeInsets.only(top: 31, left: 25, right: 25),
-                      color: Colors.grey[200],
+                      decoration: BoxDecoration(
+                          color: Colors.grey[200],
+                          borderRadius: BorderRadius.circular(4)),
                       padding: const EdgeInsets.only(top: 26, left: 21),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -127,7 +133,9 @@ class RegisterScreen extends StatelessWidget {
                       width: 343,
                       margin:
                           const EdgeInsets.only(top: 31, left: 25, right: 25),
-                      color: Colors.grey[200],
+                      decoration: BoxDecoration(
+                          color: Colors.grey[200],
+                          borderRadius: BorderRadius.circular(4)),
                       padding: const EdgeInsets.only(top: 26, left: 21),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -153,7 +161,9 @@ class RegisterScreen extends StatelessWidget {
                       width: 343,
                       margin:
                           const EdgeInsets.only(top: 31, left: 25, right: 25),
-                      color: Colors.grey[200],
+                      decoration: BoxDecoration(
+                          color: Colors.grey[200],
+                          borderRadius: BorderRadius.circular(4)),
                       padding: const EdgeInsets.only(top: 26, left: 21),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
