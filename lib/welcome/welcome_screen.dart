@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ramniui/home/home_screen.dart';
 import 'package:ramniui/style/colors.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -77,15 +78,18 @@ class WelcomeScreen extends StatelessWidget {
                         color: Color.fromARGB(255, 254, 58, 89)),
                   )),
             ),
-            Container(
-                margin: const EdgeInsets.only(top: 18),
-                child: Text(
-                  "SKIP",
-                  style: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ))
+            GestureDetector(
+              onTap: () => Get.to(const HomeScreen()),
+              child: Container(
+                  margin: const EdgeInsets.only(top: 18),
+                  child: Text(
+                    "SKIP",
+                    style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  )),
+            )
           ],
         ),
       ),
