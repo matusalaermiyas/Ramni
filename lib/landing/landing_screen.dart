@@ -29,14 +29,17 @@ class LandingScreen extends StatelessWidget {
                     width: 130,
                     height: 46,
                     margin: const EdgeInsets.only(top: 21),
-                    child: const Text(
-                      "RAMNI",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 34,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        letterSpacing: 6,
+                    child: FittedBox(
+                      fit: BoxFit.fitWidth,
+                      child: const Text(
+                        "RAMNI",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 34,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          letterSpacing: 6,
+                        ),
                       ),
                     ),
                   ),
