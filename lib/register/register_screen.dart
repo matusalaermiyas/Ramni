@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:ramniui/otp/otp_screen.dart';
-import 'package:ramniui/style/colors.dart';
+import 'package:ramniui/styles/colors.dart';
 
 import "package:flutter_svg/flutter_svg.dart";
 
