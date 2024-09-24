@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ramniui/login/login_screen.dart';
 import 'package:ramniui/register/register_screen.dart';
-import 'package:ramniui/style/colors.dart';
+import 'package:ramniui/styles/colors.dart';
 
 class LandingScreen extends StatelessWidget {
   const LandingScreen({super.key});
