@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ramniui/home/home_screen.dart';
-import 'package:ramniui/style/colors.dart';
+import 'package:ramniui/styles/colors.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
