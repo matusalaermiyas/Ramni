@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
 import 'package:ramniui/fake_data/trending_products.dart';
-import 'package:ramniui/product_details/product_details.dart';
 
 class HomeProductCard extends StatelessWidget {
   final TrendingProductsModel product;
@@ -11,22 +9,29 @@ class HomeProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => Get.to(const ProductDetailsScreen()),
-      child: Container(
-        width: 164,
-        height: 237,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
-        child: Card(
-          elevation: 2,
-          color: Colors.white,
+    return Container(
+      margin: const EdgeInsets.only(right: 13),
+      child: Card(
+        elevation: 4,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Container(
+          width: 164, // Sets width only for Container
+          height: 222,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+          ),
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
               Container(
+                margin: const EdgeInsets.all(4),
                 width: 156,
                 height: 128,
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: const Color(0xFFFBFBFB),
                     borderRadius: BorderRadius.circular(9)),
                 child: Image.asset(
                   "assets/images/${product.imageFileName}",
@@ -34,50 +39,40 @@ class HomeProductCard extends StatelessWidget {
                   height: 103,
                 ),
               ),
-              Container(
-                  margin: const EdgeInsets.only(top: 17),
-                  child: Text(
-                    product.productName,
-                    style: const TextStyle(fontSize: 14),
-                  )),
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 15,
-                  left: 22,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                        width: 50,
-                        child: FittedBox(
-                          fit: BoxFit.scaleDown,
-                          child: Text(
-                            "\$${product.price}",
-                            style: const TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600,
-                                color: Color(0xFF8B98B4)),
-                          ),
-                        )),
-                    Container(
-                      width: 34,
-                      height: 34,
-                      margin: const EdgeInsets.only(right: 13),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(17),
-                        color: const Color(0xFFF7F7F8),
-                      ),
-                      alignment: Alignment.center,
-                      child: SvgPicture.asset(
-                        "assets/svgs/cart.svg",
-                        color: Colors.red,
-                        width: 13,
-                        height: 12,
-                      ),
-                    )
-                  ],
-                ),
+              const SizedBox(
+                height: 17,
+              ),
+              Text(
+                product.productName,
+                style: const TextStyle(fontSize: 14),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 22.0),
+                    child: Text(
+                      "\$${product.price}",
+                      style: const TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF8B98B4)),
+                    ),
+                  ),
+                  Container(
+                    width: 34,
+                    height: 34,
+                    margin: const EdgeInsets.only(right: 13),
+                    child: SvgPicture.asset(
+                      "assets/svgs/add_to_cart.svg",
+                      width: 13,
+                      height: 12,
+                    ),
+                  )
+                ],
               )
             ],
           ),
