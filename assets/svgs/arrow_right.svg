@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.784" height="14.243" viewBox="0 0 22.784 14.243">
+    <g id="arrow-left" transform="translate(25.784 17.829) rotate(180)">
+        <line id="Line_14" data-name="Line 14" x1="20" transform="translate(4.784 10.707)" fill="none" stroke="#fff"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        <path id="Path_529" data-name="Path 529" d="M10.707,16.415,5,10.707,10.707,5" transform="translate(-1)"
+            fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+    </g>
+</svg>
