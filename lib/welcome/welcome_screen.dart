@@ -12,7 +12,7 @@ class WelcomeScreen extends StatelessWidget {
       body: Container(
         width: Get.size.width,
         height: Get.size.height,
-        color: backgroundColor,
+        color: primaryColor,
         child: Column(
           children: [
             Container(
