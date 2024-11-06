@@ -11,7 +11,7 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: primaryColor,
       body: SingleChildScrollView(
         child: Stack(
           children: [
@@ -191,8 +191,8 @@ class RegisterScreen extends StatelessWidget {
                           height: 58,
                           child: ElevatedButton(
                               style: ButtonStyle(
-                                  backgroundColor: MaterialStateProperty.all(
-                                      backgroundColor)),
+                                  backgroundColor:
+                                      MaterialStateProperty.all(primaryColor)),
                               onPressed: () => Get.to(const OtpScreen()),
                               child: const Text(
                                 "NEXT",
@@ -207,7 +207,7 @@ class RegisterScreen extends StatelessWidget {
             Container(
               width: Get.size.width,
               height: Get.size.height * 0.2,
-              color: backgroundColor,
+              color: primaryColor,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.max,
