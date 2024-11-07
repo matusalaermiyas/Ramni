@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ramniui/common/widgets/input.dart';
+import 'package:ramniui/home/home_screen.dart';
 import 'package:ramniui/styles/colors.dart';
 
 import "package:flutter_svg/flutter_svg.dart";
@@ -10,7 +12,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: primaryColor,
       body: SingleChildScrollView(
         child: Stack(
           children: [
@@ -47,56 +49,19 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    width: 343,
-                    decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        borderRadius: BorderRadius.circular(4)),
-                    margin: const EdgeInsets.only(top: 16, left: 25, right: 25),
-                    padding: const EdgeInsets.only(top: 26, left: 21),
-                    child: const Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          "User Name",
-                          style: TextStyle(fontSize: 18),
-                        ),
-                        TextField(
-                          decoration: InputDecoration(
-                              contentPadding: EdgeInsets.all(0),
-                              hintText: "Pankaj_Patel",
-                              border: OutlineInputBorder(
-                                  borderSide: BorderSide.none)),
-                        )
-                      ],
-                    ),
-                  ),
+                      margin:
+                          const EdgeInsets.only(top: 16, left: 25, right: 25),
+                      child: AppInput(
+                          label: 'User Name',
+                          hintText: 'Lenny Leonard',
+                          controller: TextEditingController())),
                   Container(
-                    width: 343,
                     margin: const EdgeInsets.only(top: 31, left: 25, right: 25),
-                    decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        borderRadius: BorderRadius.circular(4)),
-                    padding: const EdgeInsets.only(top: 26, left: 21),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "Password",
-                          style: TextStyle(fontSize: 18),
-                        ),
-                        TextFormField(
-                          initialValue: "12345",
-                          decoration: const InputDecoration(
-                              contentPadding: EdgeInsets.all(0),
-                              suffixIcon: Icon(Icons.visibility_off),
-                              border: OutlineInputBorder(
-                                  borderSide: BorderSide.none)),
-                          obscureText: true,
-                        )
-                      ],
-                    ),
+                    child: AppInput(
+                        label: 'Password',
+                        hintText: '*****',
+                        suffixIcon: Icon(Icons.lock),
+                        controller: TextEditingController()),
                   ),
                   const SizedBox(
                     height: 10,
@@ -109,8 +74,8 @@ class LoginScreen extends StatelessWidget {
                         child: ElevatedButton(
                             style: ButtonStyle(
                                 backgroundColor:
-                                    MaterialStateProperty.all(backgroundColor)),
-                            onPressed: () {},
+                                    MaterialStateProperty.all(primaryColor)),
+                            onPressed: () => Get.to(const HomeScreen()),
                             child: const Text(
                               "SIGN IN",
                               style:
@@ -133,7 +98,7 @@ class LoginScreen extends StatelessWidget {
             Container(
               width: Get.size.width,
               height: Get.size.height * 0.3,
-              color: backgroundColor,
+              color: primaryColor,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
