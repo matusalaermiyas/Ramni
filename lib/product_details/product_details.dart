@@ -1,8 +1,8 @@
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:ramniui/common/widgets/appbar_leading.dart';
 import 'package:ramniui/styles/colors.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
@@ -12,12 +12,11 @@ class ProductDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: const AppbarLeading(),
         actions: [
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Icon(
-              Icons.favorite,
-            ),
+            child: SvgPicture.asset("assets/svgs/favorite.svg"),
           )
         ],
       ),
@@ -118,7 +117,7 @@ class ProductDetailsScreen extends StatelessWidget {
                         tabBarProperties: const TabBarProperties(
                             unselectedLabelColor: Colors.grey,
                             labelColor: textColor,
-                            indicatorColor: backgroundColor,
+                            indicatorColor: primaryColor,
                             labelPadding: EdgeInsets.all(0),
                             margin: EdgeInsets.all(0),
                             padding: EdgeInsets.all(0)),
@@ -139,9 +138,12 @@ class ProductDetailsScreen extends StatelessWidget {
                         views: [
                           Container(
                             margin: const EdgeInsets.only(top: 25),
-                            child: const Text(
+                            padding: const EdgeInsets.symmetric(horizontal: 25),
+                            child: Text(
                               "Minimalist Styling Is Not About Creating A Cold, Hard, Empty White Box Of A Home. It Is About Using Simple And Natural Forms, And Taking Away Layers Without Losing The Aesthetic Appeal Of The Space. The Focus Is On Shape, With A Furniture And Accessories.",
-                              style: TextStyle(fontSize: 14),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.black.withOpacity(0.5)),
                             ),
                           ),
                           Container(
@@ -162,7 +164,7 @@ class ProductDetailsScreen extends StatelessWidget {
                         width: 120,
                         height: 58,
                         decoration: BoxDecoration(
-                            color: backgroundColor,
+                            color: primaryColor,
                             borderRadius: BorderRadius.circular(75)),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -186,7 +188,7 @@ class ProductDetailsScreen extends StatelessWidget {
                         width: 194,
                         height: 58,
                         decoration: BoxDecoration(
-                            color: backgroundColor,
+                            color: primaryColor,
                             borderRadius: BorderRadius.circular(75)),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
