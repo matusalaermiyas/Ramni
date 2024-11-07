@@ -1,6 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:ramniui/cart/cart_screen.dart';
+import 'package:ramniui/filters/filters.dart';
 import 'package:ramniui/home/home_utils.dart';
 import 'package:ramniui/styles/colors.dart';
 
@@ -10,7 +14,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: primaryColor,
       body: SingleChildScrollView(
         physics: const NeverScrollableScrollPhysics(),
         child: Stack(
@@ -55,11 +59,14 @@ class HomeScreen extends StatelessWidget {
                             const SizedBox(
                               width: 23,
                             ),
-                            Container(
-                                margin: const EdgeInsets.only(
-                                    top: 19, right: 21, bottom: 20),
-                                child:
-                                    SvgPicture.asset("assets/svgs/cart.svg")),
+                            GestureDetector(
+                              onTap: () => Get.to(const CartScreen()),
+                              child: Container(
+                                  margin: const EdgeInsets.only(
+                                      top: 19, right: 21, bottom: 20),
+                                  child:
+                                      SvgPicture.asset("assets/svgs/cart.svg")),
+                            ),
                           ],
                         )
                       ],
@@ -104,15 +111,19 @@ class HomeScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Container(
-                            decoration: BoxDecoration(
-                                color: const Color(0xFFF7F7F8),
-                                borderRadius: BorderRadius.circular(4)),
-                            margin: const EdgeInsets.only(left: 11),
-                            width: 40,
-                            height: 40,
-                            child: Center(
-                              child: SvgPicture.asset("assets/svgs/filter.svg"),
+                          GestureDetector(
+                            onTap: () => Get.to(const FilterScreen()),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  color: const Color(0xFFF7F7F8),
+                                  borderRadius: BorderRadius.circular(4)),
+                              margin: const EdgeInsets.only(left: 11),
+                              width: 40,
+                              height: 40,
+                              child: Center(
+                                child:
+                                    SvgPicture.asset("assets/svgs/filter.svg"),
+                              ),
                             ),
                           )
                         ],
@@ -192,7 +203,7 @@ class HomeScreen extends StatelessWidget {
                                   horizontal: 17, vertical: 6),
                               margin: const EdgeInsets.only(right: 15),
                               decoration: BoxDecoration(
-                                  color: backgroundColor,
+                                  color: primaryColor,
                                   borderRadius: BorderRadius.circular(15)),
                               child: const Text(
                                 "All",
