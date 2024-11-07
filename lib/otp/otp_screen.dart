@@ -11,7 +11,7 @@ class OtpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: primaryColor,
       body: SingleChildScrollView(
         child: Stack(
           children: [
@@ -130,7 +130,7 @@ class OtpScreen extends StatelessWidget {
                         child: ElevatedButton(
                             style: ButtonStyle(
                                 backgroundColor:
-                                    MaterialStateProperty.all(backgroundColor)),
+                                    MaterialStateProperty.all(primaryColor)),
                             onPressed: () => Get.to(WelcomeScreen()),
                             child: const Text(
                               "VERIFY OTP",
@@ -176,7 +176,7 @@ class OtpScreen extends StatelessWidget {
             Container(
               width: Get.size.width,
               height: Get.size.height * 0.3,
-              color: backgroundColor,
+              color: primaryColor,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,

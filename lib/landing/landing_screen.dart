@@ -13,7 +13,7 @@ class LandingScreen extends StatelessWidget {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        color: backgroundColor,
+        color: primaryColor,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
